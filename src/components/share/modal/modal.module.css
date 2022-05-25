@@ -1,11 +1,10 @@
-
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 40%;
   height: 500px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: #3c2a4d;
   border-radius: 10px;
   display: flex;
@@ -13,9 +12,12 @@
   align-items: center;
   justify-content: space-around;
   color: #e0f0ea;
-
 }
-
+@media screen and (max-width: 768px) {
+  .modal{
+    width: 300px;
+  }
+}
 .imgdiv {
   width: 70%;
   border-bottom: 1px solid #95adbe;
@@ -37,7 +39,7 @@
 }
 
 .pdiv {
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

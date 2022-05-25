@@ -5,12 +5,10 @@ const Modal = (props) => {
   const selectedCoin = props.coins.find((item) => item.id === props.coinId);
 
   return (
-    
       <div className={styles.modal}>
         <div className={styles.imgdiv}>
           <img src={selectedCoin.image} />
         </div>
-
         <div className={styles.pdiv}>
           <p>
             symbol: <span>{selectedCoin.symbol}</span>
@@ -19,7 +17,6 @@ const Modal = (props) => {
             name: <span>{selectedCoin.name}</span>
           </p>
         </div>
-
         <div className={styles.pdiv}>
           <p>
             low_24h:
@@ -34,7 +31,6 @@ const Modal = (props) => {
             </span>
           </p>
         </div>
-
         <div className={styles.pdiv}>
           <p>
             current_price:
