@@ -9,7 +9,6 @@ import BackDrop from "../share/backDrop/BackDrop";
 //css
 import styles from "./main.module.css";
 
-
 const Main = () => {
   const [coins, setCoins] = useState([]);
   const [isShow, setIsShow] = useState(false);
@@ -38,18 +37,17 @@ const Main = () => {
     item.name.toLowerCase().includes(search.toLowerCase())
   );
   return (
-    
     <div className={styles.main}>
       {coins.length ? (
-          <input
-            className={styles.input}
-            type="text"
-            name="search"
-            placeholder="Search..."
-            value={search}
-            onChange={changeHandler}
-          />
-        ):null}
+        <input
+          className={styles.input}
+          type="text"
+          name="search"
+          placeholder="Search..."
+          value={search}
+          onChange={changeHandler}
+        />
+      ) : <img src={loading} />}
       <div className={styles.itemslist}>
         {searchedItems.map((item) => (
           <Item
@@ -59,12 +57,9 @@ const Main = () => {
           />
         ))}
         {isShow && <BackDrop clickHandler={closeModal} />}
-        {isShow && <Modal coinId={coinId} coins={coins}/>}
-        {!coins.length && <img src={loading} />}
-        
+        {isShow && <Modal coinId={coinId} coins={coins} />}
       </div>
     </div>
-    
   );
 };
 

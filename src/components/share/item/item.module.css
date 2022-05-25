@@ -20,3 +20,10 @@
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   transition: all 0.5s;
 }
+@media screen and (max-width:470px) {
+  .item{
+    width: 150px;
+    height: auto;
+  }
+}
+

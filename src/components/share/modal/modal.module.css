@@ -14,7 +14,7 @@
   color: #e0f0ea;
 }
 @media screen and (max-width: 768px) {
-  .modal{
+  .modal {
     width: 300px;
   }
 }
